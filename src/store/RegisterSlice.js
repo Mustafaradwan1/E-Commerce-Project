@@ -1,31 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
-const fetchRegisterInLocalStorage = ()=>{
-    let RegisterData = localStorage.getItem("Register")
-    if(RegisterData){
-        return JSON.parse(localStorage.getItem("Register"))
-    }else{
-        return []
-    }
-}
+
 const setRegisterInLocalStorage = (arr)=>{
     localStorage.setItem("Register",JSON.stringify(arr))
-}
-
-const fetchLogoutInLocalStorage = ()=>{
-    let login = localStorage.getItem("Login")
-    if(login){
-        return JSON.parse(localStorage.getItem("Login"))
-    }else{
-        return []
-    }
 }
 const setLoginInLocalStorage = (arr)=>{
     localStorage.setItem("Login",JSON.stringify(arr))
 }
-
 const initialState = {
-    data : fetchRegisterInLocalStorage(),
-    login : fetchLogoutInLocalStorage()
+    data : [],
+    login : []
 }
 
 const RegisterSlice = createSlice({
