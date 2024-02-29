@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", ".next/Cart.tsx", "src/components/header/Sidebar.jsx", "src/components/header/ShoppingCart.jsx", "src/components/header/SearchBar.jsx", "src/components/header/NavTop.jsx", "src/components/header/Navbar.jsx", "src/components/header/Links.jsx", "src/app/search/page.jsx", "src/store/SearchProduct.js", "src/store/SidebarSlice.js", "src/store/ProductsSlice.js", "src/store/CategoryProduct.js", "src/store/CategoriesSlice.js", "src/store/CartSlice.js", "src/store/store.js", "src/app/category/page.jsx", "src/components/AllProducts/Fragrannces.jsx", "src/components/AllProducts/Laptops.jsx", "src/components/AllProducts/Products.jsx", "src/components/AllProducts/SmartPhone.jsx", "src/components/AllProducts/AllProducts.jsx", "src/app/product/page.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/app/Login/page.jsx", "src/app/Cart/page.jsx"],
   "exclude": ["node_modules"]
 }
