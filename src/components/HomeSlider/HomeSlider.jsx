@@ -22,7 +22,7 @@ const HomeSlider = () => {
   className="mt-10  w-full">
     <div className="container">
     <Slider {...settings}>
-        {imgBanners.map((img:any,ind:number)=>(
+        {imgBanners.map((img,ind)=>(
         <div key={ind} className="relative imgBanners">
           <Image src={img.img} alt="banner-img" className="w-full h-64 md:h-96" />
         </div>
