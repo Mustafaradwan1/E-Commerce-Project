@@ -8,6 +8,7 @@ import CartSlice from "./CartSlice";
 import RegisterSlice from "./RegisterSlice";
 
 
+
 const store = configureStore({
     reducer:{
         sidebar:SidebarSlice,
@@ -16,7 +17,7 @@ const store = configureStore({
         category:CategoryProduct,
         search:SearchProduct,
         cart:CartSlice,
-        register:RegisterSlice,
+        register:RegisterSlice, 
     }
 })
 export default store

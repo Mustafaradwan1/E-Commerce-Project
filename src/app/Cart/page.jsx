@@ -12,19 +12,18 @@ import Loading from '@/components/Loading/Loading';
 import Link from 'next/link';
 
 const Cart = () => {
-  
   let num =0;
   const [active,setactive] = useState(true)
   const AllCart = useSelector(getAllCart)
   const dispatch = useDispatch()
-  console.log(AllCart)
   if(AllCart !== null){
     for(let i = 0; AllCart.length  > i ;i++){
       num += AllCart[i].totalPrice 
     }
   }
-  console.log(AllCart.length)
-  if(AllCart.length === 0){
+
+  if(!AllCart){
+
     localStorage.removeItem("cartLocal")
   }
   useEffect(()=>{
@@ -37,7 +36,7 @@ const Cart = () => {
       <Loading/>
       : 
       <div className='container'>
-      {AllCart.length > 0 ? 
+      {AllCart !== null ? 
       <div className=' lg:flex  gap-2 mt-5'>
       <div className='w-full mb-2 lg:w-[70%] bg-white rounded-sm   px-5 pb-5'>
         <div className='border-b border-gray-300 py-2'>Cart({AllCart.length})</div>

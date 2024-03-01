@@ -15,6 +15,7 @@ const ProductPage = ({searchParams}) => {
   let [count,setcount] =  useState(1)
     const {_id} = searchParams
     const productsData = useSelector(getSingleProduct)
+    
     const dispatch = useDispatch()
     useEffect(()=>{
         dispatch(fetchSingleProduct(_id))
@@ -91,6 +92,7 @@ const ProductPage = ({searchParams}) => {
             <button className='cursor-pointer bg-gray-950 text-gray-100 rounded-full py-2 px-5 active:scale-105 transition' onClick={()=>{
             if(localStorage.getItem("Login") !== null){
               addToCartData(productsData)
+         
             }else{
               alert("please login")
             }
